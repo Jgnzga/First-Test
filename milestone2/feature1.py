@@ -2,7 +2,7 @@ import openai
 import streamlit as st
 
 # Set up OpenAI API key
-openai.api_key = 'our_openai_api_key'
+openai.api_key = 'OPEN_API_KEY'
 
 # Function to generate a water-saving response from the AI
 def get_water_saving_advice(user_question):
