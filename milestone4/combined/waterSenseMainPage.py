@@ -1,29 +1,19 @@
 import streamlit as st
-
-# Define each feature as a separate function
-def chatbot_feature():
-    st.header("Water Conservation Chatbot")
-    # Add code for chatbot functionality here
-
-def water_cost_calculator():
-    st.header("Water Cost Calculator")
-    # Add code for cost calculation here
-
-def third_feature():
-    st.header("Additional Water Saving Feature")
-    # Add code for third feature here
+import pages.weather as weather
+import pages.WaterMeterCalculatorAPI as water_meter
+import pages.watercalc2 as water_calculator
 
 # Main page with navigation
 st.title("Water Conservation App")
 
-# Create a sidebar or radio button for navigation
+# Sidebar navigation for different features
 feature_choice = st.sidebar.radio("Choose a Feature:", 
-                                  ("Chatbot", "Cost Calculator", "Third Feature"))
+                                  ("Weather Analysis", "Water Meter Tracker", "Water Usage Calculator"))
 
 # Display the selected feature
-if feature_choice == "Chatbot":
-    chatbot_feature()
-elif feature_choice == "Cost Calculator":
-    water_cost_calculator()
-elif feature_choice == "Third Feature":
-    third_feature()
+if feature_choice == "Weather Analysis":
+    weather.main()  # Calls the main function in weather.py
+elif feature_choice == "Water Meter Tracker":
+    water_meter.main()  # Calls the main function in WaterMeterCalculatorAPI.py
+elif feature_choice == "Water Usage Calculator":
+    water_calculator.main()  # Calls the main function in watercalc2.py
