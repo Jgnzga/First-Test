@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 
 # UtilityAPI base URL and headers (replace 'YOUR_API_KEY' with actual API key)
 API_URL = 'https://utilityapi.com/api/v2/meters/{meter_id}/intervals'
-headers = {'Authorization': 'Bearer YOUR_API_KEY'}
+headers = {'Authorization': 'Bearer OPENAI_API_KEY'}
 
 # Load interval data from CSV file
 def load_interval_data_csv(file_path):
